@@ -1,0 +1,89 @@
+﻿<Page x:Class="XamBindingSample.BindingPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:helpers="using:XamBindingSample.Helpers"
+      mc:Ignorable="d">
+
+    <Page.Resources>
+        <helpers:BoolToStringConverter x:Key="BoolToStringConverter" />
+    </Page.Resources>
+
+    <Page.DataContext>
+        <Binding Mode="OneWay"
+                 Path="Bindings"
+                 Source="{StaticResource Locator}" />
+    </Page.DataContext>
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <ScrollViewer Background="#DDDDDD">
+            <StackPanel Margin="12">
+                <TextBlock Text="Simple bindings"
+                           Style="{StaticResource LabelStyle}" />
+
+                <Button Content="Toggle the VM's property"
+                        Style="{StaticResource ButtonStyle}"
+                        Command="{Binding ToggleCommand, Mode=OneWay}" />
+
+                <CheckBox Content="This checkbox is bound to the VM's property"
+                          Style="{StaticResource CheckBoxStyle}"
+                          IsChecked="{Binding MyBoolProperty}" />
+
+                <Rectangle Style="{StaticResource SubSeparatorStyle}" />
+
+                <TextBox x:Name="MyTextBoxB1"
+                         Text="PropertyChanged triggers the binding (default)"
+                         Style="{StaticResource TextBoxStyle}" />
+
+                <TextBlock Text="{Binding Text, ElementName=MyTextBoxB1}"
+                           Style="{StaticResource TextBlockStyle}" />
+
+                <Rectangle Style="{StaticResource SubSeparatorStyle}" />
+
+                <CheckBox x:Name="MyCheckBoxC1"
+                          Content="PropertyChanged triggers the binding (default)"
+                          Style="{StaticResource CheckBoxStyle}" />
+
+                <CheckBox Content="The other checkbox"
+                          Style="{StaticResource CheckBoxStyle}"
+                          IsChecked="{Binding IsChecked, ElementName=MyCheckBoxC1}" />
+
+                <Rectangle Style="{StaticResource SeparatorStyle}" />
+
+                <TextBlock Text="Bindings with custom events (not supported in Windows 10)"
+                           Style="{StaticResource LabelStyle}" />
+
+                <Rectangle Style="{StaticResource SeparatorStyle}" />
+
+                <TextBlock Text="2-way with conversion"
+                           Style="{StaticResource LabelStyle}" />
+
+                <CheckBox Content="This checkbox is bound to the Text below (with custom conversion)"
+                          x:Name="MyCheckBoxG1"
+                          Style="{StaticResource CheckBoxStyle}" />
+
+                <TextBox Text="{Binding ElementName=MyCheckBoxG1, Path=IsChecked, Mode=TwoWay, Converter={StaticResource BoolToStringConverter}, UpdateSourceTrigger=PropertyChanged}"
+                         Style="{StaticResource TextBoxStyle}" />
+
+                <Rectangle Style="{StaticResource SeparatorStyle}" />
+
+                <TextBlock Text="When Source Changes (not supported on Windows 10)"
+                           Style="{StaticResource LabelStyle}" />
+
+                <Rectangle Style="{StaticResource SeparatorStyle}" />
+
+                <TextBlock Text="FallbackValue and TargetNullValue"
+                           Style="{StaticResource LabelStyle}" />
+
+                <TextBlock Style="{StaticResource TextBlockStyle}"
+                           Text="{Binding Model.MyModelProperty, FallbackValue=Model object is null, TargetNullValue=Value is null}" />
+
+                <Button Content="Set the Model and then the Property"
+                        Command="{Binding SetModelPropertyCommand}"
+                        Style="{StaticResource ButtonStyle}" />
+            </StackPanel>
+        </ScrollViewer>
+
+    </Grid>
+</Page>

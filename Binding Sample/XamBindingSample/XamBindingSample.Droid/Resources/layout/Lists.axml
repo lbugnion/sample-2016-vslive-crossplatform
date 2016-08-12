@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/MyRecycler"
+        android:layout_above="@+id/SelectedItemNamePanel"
+        android:layout_alignParentTop="true" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_above="@+id/ButtonsPanel"
+        android:id="@+id/SelectedItemNamePanel"
+        android:background="#AAAAAA">
+        <TextView
+            style="@style/SmallBindingTextStyle"
+            android:text="Nothing yet"
+            android:id="@+id/SelectedItemNameText" />
+        <TextView
+            style="@style/SmallBindingTextStyle"
+            android:text="Nothing yet"
+            android:id="@+id/ToggledItemsText" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/ButtonsPanel">
+        <Button
+            android:id="@+id/AddButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30dp"
+            android:text="Add"
+            android:layout_weight="1" />
+        <Button
+            android:id="@+id/RemoveButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30dp"
+            android:text="Remove"
+            android:layout_weight="1" />
+    </LinearLayout>
+</RelativeLayout>

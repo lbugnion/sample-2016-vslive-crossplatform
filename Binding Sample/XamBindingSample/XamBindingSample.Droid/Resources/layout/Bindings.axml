@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:minWidth="25px"
+            android:minHeight="25px">
+            <TextView
+                android:text="Simple bindings"
+                style="@style/LabelStyle" />
+            <Button
+                android:text="Toggle the VM's property"
+                android:id="@+id/MyButtonA1"
+                style="@style/ButtonStyle" />
+            <CheckBox
+                android:text="This checkbox is bound to the VM's property"
+                android:id="@+id/MyCheckBoxA1"
+                style="@style/CheckBoxStyle" />
+            <View
+                style="@style/SubSeparatorStyle" />
+            <EditText
+                android:text="TextChanged triggers the binding (default)"
+                android:id="@+id/MyEditTextB1"
+                style="@style/EditTextStyle" />
+            <TextView
+                android:id="@+id/MyTextViewB1"
+                android:text="Nothing yet"
+                style="@style/BindingTextStyle" />
+            <View
+                style="@style/SubSeparatorStyle" />
+            <CheckBox
+                android:text="CheckedChange triggers the binding (default)"
+                android:id="@+id/MyCheckBoxC1"
+                style="@style/CheckBoxStyle" />
+            <CheckBox
+                android:text="The other checkbox"
+                android:id="@+id/MyCheckBoxC2"
+                style="@style/CheckBoxStyle" />
+            <View
+                style="@style/SeparatorStyle" />
+            <TextView
+                android:text="Bindings with custom events"
+                style="@style/LabelStyle" />
+            <EditText
+                android:text="Click will trigger the binding"
+                android:id="@+id/MyEditTextD1"
+                style="@style/EditTextStyle" />
+            <TextView
+                android:text="Nothing yet"
+                android:id="@+id/MyTextViewD1"
+                style="@style/BindingTextStyle" />
+            <View
+                style="@style/SubSeparatorStyle" />
+            <EditText
+                android:text="Focus change will trigger the binding"
+                android:id="@+id/MyEditTextE1"
+                style="@style/EditTextStyle" />
+            <TextView
+                android:text="Nothing yet"
+                android:id="@+id/MyTextViewE1"
+                style="@style/BindingTextStyle" />
+            <View
+                style="@style/SeparatorStyle" />
+            <TextView
+                android:text="2-way with conversion"
+                style="@style/LabelStyle" />
+            <CheckBox
+                android:text="This checkbox is bound to the Text below (with conversion)"
+                android:id="@+id/MyCheckBoxF1"
+                style="@style/CheckBoxStyle" />
+            <EditText
+                android:text="Nothing yet"
+                android:id="@+id/MyEditTextF1"
+                style="@style/EditTextStyle" />
+            <View
+                style="@style/SubSeparatorStyle" />
+            <CheckBox
+                android:text="This checkbox is bound to the Text below (with custom conversion)"
+                android:id="@+id/MyCheckBoxG1"
+                style="@style/CheckBoxStyle" />
+            <EditText
+                android:text="Nothing yet"
+                android:id="@+id/MyEditTextG1"
+                style="@style/EditTextStyle" />
+            <View
+                style="@style/SeparatorStyle" />
+            <TextView
+                android:text="When Source Changes"
+                style="@style/LabelStyle" />
+            <CheckBox
+                android:text="This checkbox is linked to the text below"
+                android:id="@+id/MyCheckBoxH1"
+                style="@style/CheckBoxStyle" />
+            <TextView
+                android:text="Nothing yet"
+                android:id="@+id/MyTextViewH1"
+                style="@style/BindingTextStyle" />
+        <!--<View
+                style="@style/SeparatorStyle" />
+            <TextView
+                android:text="Value and ValueChanged"
+                style="@style/LabelStyle" />
+            <TextView
+                android:text="Nothing yet"
+                android:id="@+id/MyTextViewI1"
+                style="@style/BindingTextStyle" />
+            <EditText
+                android:text="TextChanged will trigger the ValueChanged event"
+                android:id="@+id/MyEditTextI1"
+                style="@style/EditTextStyle" />-->
+            <View
+                style="@style/SeparatorStyle" />
+            <TextView
+                android:text="FallbackValue and TargetNullValue"
+                style="@style/LabelStyle" />
+            <TextView
+                android:text="Nothing yet"
+                android:id="@+id/MyTextViewJ1"
+                style="@style/BindingTextStyle" />
+            <Button
+                android:text="Set the Model and then the Property"
+                android:id="@+id/MyButtonJ1"
+                style="@style/ButtonStyle" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

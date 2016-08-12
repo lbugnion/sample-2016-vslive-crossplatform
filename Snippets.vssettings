@@ -1,0 +1,114 @@
+<UserSettings><ApplicationIdentity version="14.0"/><ToolsOptions/><Category name="Environment_Group" RegisteredName="Environment_Group"><Category name="Environment_Toolbox" Category="{481999F2-7479-4e03-83D5-BE808BA142DF}" Package="{DA9FB551-C724-11d0-AE1F-00A0C90FFFC3}" RegisteredName="Environment_Toolbox" PackageName="Visual Studio Environment Package"><PropertyValue name="ShowAllTabs">false</PropertyValue><PropertyValue name="Version">1</PropertyValue><PropertyValue name="DeletedTabCount">0</PropertyValue><PropertyValue name="Tab0.Name">Other Layouts</PropertyValue><PropertyValue name="Tab0.View">0</PropertyValue><PropertyValue name="Tab0.UseDefaultName">true</PropertyValue><PropertyValue name="Tab0.RecordType">1</PropertyValue><PropertyValue name="Tab0.Position">36</PropertyValue><PropertyValue name="Tab1.Name">Time &amp; Date</PropertyValue><PropertyValue name="Tab1.View">0</PropertyValue><PropertyValue name="Tab1.UseDefaultName">true</PropertyValue><PropertyValue name="Tab1.RecordType">1</PropertyValue><PropertyValue name="Tab1.Position">37</PropertyValue><PropertyValue name="Tab2.Name">Text Fields</PropertyValue><PropertyValue name="Tab2.View">0</PropertyValue><PropertyValue name="Tab2.UseDefaultName">true</PropertyValue><PropertyValue name="Tab2.RecordType">1</PropertyValue><PropertyValue name="Tab2.Position">38</PropertyValue><PropertyValue name="Tab3.Name">Form Widgets</PropertyValue><PropertyValue name="Tab3.View">0</PropertyValue><PropertyValue name="Tab3.UseDefaultName">true</PropertyValue><PropertyValue name="Tab3.RecordType">1</PropertyValue><PropertyValue name="Tab3.Position">39</PropertyValue><PropertyValue name="Tab4.Name">Advanced</PropertyValue><PropertyValue name="Tab4.View">0</PropertyValue><PropertyValue name="Tab4.UseDefaultName">true</PropertyValue><PropertyValue name="Tab4.RecordType">1</PropertyValue><PropertyValue name="Tab4.Position">40</PropertyValue><PropertyValue name="Tab5.Name">Composite</PropertyValue><PropertyValue name="Tab5.View">0</PropertyValue><PropertyValue name="Tab5.UseDefaultName">true</PropertyValue><PropertyValue name="Tab5.RecordType">1</PropertyValue><PropertyValue name="Tab5.Position">41</PropertyValue><PropertyValue name="Tab6.Name">Layouts</PropertyValue><PropertyValue name="Tab6.View">0</PropertyValue><PropertyValue name="Tab6.UseDefaultName">true</PropertyValue><PropertyValue name="Tab6.RecordType">1</PropertyValue><PropertyValue name="Tab6.Position">42</PropertyValue><PropertyValue name="Tab7.Name">Images &amp; Media</PropertyValue><PropertyValue name="Tab7.View">0</PropertyValue><PropertyValue name="Tab7.UseDefaultName">true</PropertyValue><PropertyValue name="Tab7.RecordType">1</PropertyValue><PropertyValue name="Tab7.Position">43</PropertyValue><PropertyValue name="Tab8.Name">Other Widgets</PropertyValue><PropertyValue name="Tab8.View">0</PropertyValue><PropertyValue name="Tab8.UseDefaultName">true</PropertyValue><PropertyValue name="Tab8.RecordType">1</PropertyValue><PropertyValue name="Tab8.Position">44</PropertyValue><PropertyValue name="Tab9.ID">Control Flow</PropertyValue><PropertyValue name="Tab9.Name">Control Flow</PropertyValue><PropertyValue name="Tab9.View">0</PropertyValue><PropertyValue name="Tab9.UseDefaultName">true</PropertyValue><PropertyValue name="Tab9.RecordType">4</PropertyValue><PropertyValue name="Tab9.Position">45</PropertyValue><PropertyValue name="TabCount">10</PropertyValue><PropertyValue name="DeletedItemCount">0</PropertyValue><PropertyValue name="Item0.DataProvider">{0A057BAD-6706-45D2-A800-683A29EC6BA3}</PropertyValue><PropertyValue name="Item0.ID">B70A7073F5C4EABBB857D551AE7B2F95</PropertyValue><PropertyValue name="Item0.Name">-- WPF --------------------</PropertyValue><PropertyValue name="Item0.UseDefaultName">true</PropertyValue><PropertyValue name="Item0.Tab">General</PropertyValue><PropertyValue name="Item0.TabID">General</PropertyValue><PropertyValue name="Item0.OriginalTabID">General</PropertyValue><PropertyValue name="Item0.OriginalTab">General</PropertyValue><PropertyValue name="Item0.RecordType">1</PropertyValue><PropertyValue name="Item0.Data">        &lt;Style x:Key="MouseStyle"
+               TargetType="Rectangle"&gt;
+            &lt;Setter Property="Margin"
+                    Value="8" /&gt;
+            &lt;Setter Property="Height"
+                    Value="24" /&gt;
+            &lt;Setter Property="Width"
+                    Value="24" /&gt;
+        &lt;/Style&gt;
+</PropertyValue><PropertyValue name="Item0.Position">1</PropertyValue><PropertyValue name="Item1.DataProvider">{0A057BAD-6706-45D2-A800-683A29EC6BA3}</PropertyValue><PropertyValue name="Item1.ID">F946A7F8AEA5042F059F3075287D98E1</PropertyValue><PropertyValue name="Item1.Name">-&gt; SubmitClick</PropertyValue><PropertyValue name="Item1.UseDefaultName">true</PropertyValue><PropertyValue name="Item1.Tab">General</PropertyValue><PropertyValue name="Item1.TabID">General</PropertyValue><PropertyValue name="Item1.OriginalTabID">General</PropertyValue><PropertyValue name="Item1.OriginalTab">General</PropertyValue><PropertyValue name="Item1.RecordType">1</PropertyValue><PropertyValue name="Item1.Data">
+            var message = $"Submit clicked {++_counter} times";
+            TileHelper.ShowTileNotification(message);
+            ToastHelper.PopToast("VS Live!!", message);
+</PropertyValue><PropertyValue name="Item1.Position">2</PropertyValue><PropertyValue name="Item2.DataProvider">{0A057BAD-6706-45D2-A800-683A29EC6BA3}</PropertyValue><PropertyValue name="Item2.ID">B70A7073F5C4EABBB857D551AE7B2F95</PropertyValue><PropertyValue name="Item2.Name">-- Windows 10 --------------------</PropertyValue><PropertyValue name="Item2.UseDefaultName">true</PropertyValue><PropertyValue name="Item2.Tab">General</PropertyValue><PropertyValue name="Item2.TabID">General</PropertyValue><PropertyValue name="Item2.OriginalTabID">General</PropertyValue><PropertyValue name="Item2.OriginalTab">General</PropertyValue><PropertyValue name="Item2.RecordType">1</PropertyValue><PropertyValue name="Item2.Data">        &lt;Style x:Key="MouseStyle"
+               TargetType="Rectangle"&gt;
+            &lt;Setter Property="Margin"
+                    Value="8" /&gt;
+            &lt;Setter Property="Height"
+                    Value="24" /&gt;
+            &lt;Setter Property="Width"
+                    Value="24" /&gt;
+        &lt;/Style&gt;
+</PropertyValue><PropertyValue name="Item2.Position">3</PropertyValue><PropertyValue name="Item3.DataProvider">{0A057BAD-6706-45D2-A800-683A29EC6BA3}</PropertyValue><PropertyValue name="Item3.ID">514997605AACFF6B781FA0BA6C1190D5</PropertyValue><PropertyValue name="Item3.Name">-&gt; Button_Click</PropertyValue><PropertyValue name="Item3.UseDefaultName">true</PropertyValue><PropertyValue name="Item3.Tab">General</PropertyValue><PropertyValue name="Item3.TabID">General</PropertyValue><PropertyValue name="Item3.OriginalTabID">General</PropertyValue><PropertyValue name="Item3.OriginalTab">General</PropertyValue><PropertyValue name="Item3.RecordType">1</PropertyValue><PropertyValue name="Item3.Data">            var client = new HttpClient();
+            var html = await client.GetStringAsync("http://www.identitymine.com/about/");
+
+            if (html.Contains("Laurent Bugnion"))
+            {
+                Output.Text = "You must go to work";
+            }
+            else
+            {
+                Output.Text = "You can stay in bed today!";
+            }
+</PropertyValue><PropertyValue name="Item3.Position">4</PropertyValue><PropertyValue name="Item4.DataProvider">{0A057BAD-6706-45D2-A800-683A29EC6BA3}</PropertyValue><PropertyValue name="Item4.ID">B70A7073F5C4EABBB857D551AE7B2F95</PropertyValue><PropertyValue name="Item4.Name">-- Xamarin --------------------</PropertyValue><PropertyValue name="Item4.UseDefaultName">true</PropertyValue><PropertyValue name="Item4.Tab">General</PropertyValue><PropertyValue name="Item4.TabID">General</PropertyValue><PropertyValue name="Item4.OriginalTabID">General</PropertyValue><PropertyValue name="Item4.OriginalTab">General</PropertyValue><PropertyValue name="Item4.RecordType">1</PropertyValue><PropertyValue name="Item4.Data">        &lt;Style x:Key="MouseStyle"
+               TargetType="Rectangle"&gt;
+            &lt;Setter Property="Margin"
+                    Value="8" /&gt;
+            &lt;Setter Property="Height"
+                    Value="24" /&gt;
+            &lt;Setter Property="Width"
+                    Value="24" /&gt;
+        &lt;/Style&gt;
+</PropertyValue><PropertyValue name="Item4.Position">5</PropertyValue><PropertyValue name="Item5.DataProvider">{0A057BAD-6706-45D2-A800-683A29EC6BA3}</PropertyValue><PropertyValue name="Item5.ID">B70A7073F5C4EABBB857D551AE7B2F95</PropertyValue><PropertyValue name="Item5.Name">-- MainViewModel --</PropertyValue><PropertyValue name="Item5.UseDefaultName">true</PropertyValue><PropertyValue name="Item5.Tab">General</PropertyValue><PropertyValue name="Item5.TabID">General</PropertyValue><PropertyValue name="Item5.OriginalTabID">General</PropertyValue><PropertyValue name="Item5.OriginalTab">General</PropertyValue><PropertyValue name="Item5.RecordType">1</PropertyValue><PropertyValue name="Item5.Data">        &lt;Style x:Key="MouseStyle"
+               TargetType="Rectangle"&gt;
+            &lt;Setter Property="Margin"
+                    Value="8" /&gt;
+            &lt;Setter Property="Height"
+                    Value="24" /&gt;
+            &lt;Setter Property="Width"
+                    Value="24" /&gt;
+        &lt;/Style&gt;
+</PropertyValue><PropertyValue name="Item5.Position">6</PropertyValue><PropertyValue name="Item6.DataProvider">{0A057BAD-6706-45D2-A800-683A29EC6BA3}</PropertyValue><PropertyValue name="Item6.ID">E6858D882313A458C9A72207B4A05ADF</PropertyValue><PropertyValue name="Item6.Name">Attributes</PropertyValue><PropertyValue name="Item6.UseDefaultName">true</PropertyValue><PropertyValue name="Item6.Tab">General</PropertyValue><PropertyValue name="Item6.TabID">General</PropertyValue><PropertyValue name="Item6.OriginalTabID">General</PropertyValue><PropertyValue name="Item6.OriginalTab">General</PropertyValue><PropertyValue name="Item6.RecordType">1</PropertyValue><PropertyValue name="Item6.Data">        public const string MessageTemplate = "Button was clicked {0} times";
+        private int _count;
+
+</PropertyValue><PropertyValue name="Item6.Position">7</PropertyValue><PropertyValue name="Item7.DataProvider">{0A057BAD-6706-45D2-A800-683A29EC6BA3}</PropertyValue><PropertyValue name="Item7.ID">2178D90B1D08C3386149FC3C8FA2479D</PropertyValue><PropertyValue name="Item7.Name">-&gt; UpdateCommand</PropertyValue><PropertyValue name="Item7.UseDefaultName">true</PropertyValue><PropertyValue name="Item7.Tab">General</PropertyValue><PropertyValue name="Item7.TabID">General</PropertyValue><PropertyValue name="Item7.OriginalTabID">General</PropertyValue><PropertyValue name="Item7.OriginalTab">General</PropertyValue><PropertyValue name="Item7.RecordType">1</PropertyValue><PropertyValue name="Item7.Data">                        Title = string.Format(MessageTemplate, ++_count);
+</PropertyValue><PropertyValue name="Item7.Position">8</PropertyValue><PropertyValue name="Item8.DataProvider">{0A057BAD-6706-45D2-A800-683A29EC6BA3}</PropertyValue><PropertyValue name="Item8.ID">B70A7073F5C4EABBB857D551AE7B2F95</PropertyValue><PropertyValue name="Item8.Name">-- TestSample --</PropertyValue><PropertyValue name="Item8.UseDefaultName">true</PropertyValue><PropertyValue name="Item8.Tab">General</PropertyValue><PropertyValue name="Item8.TabID">General</PropertyValue><PropertyValue name="Item8.OriginalTabID">General</PropertyValue><PropertyValue name="Item8.OriginalTab">General</PropertyValue><PropertyValue name="Item8.RecordType">1</PropertyValue><PropertyValue name="Item8.Data">        &lt;Style x:Key="MouseStyle"
+               TargetType="Rectangle"&gt;
+            &lt;Setter Property="Margin"
+                    Value="8" /&gt;
+            &lt;Setter Property="Height"
+                    Value="24" /&gt;
+            &lt;Setter Property="Width"
+                    Value="24" /&gt;
+        &lt;/Style&gt;
+</PropertyValue><PropertyValue name="Item8.Position">9</PropertyValue><PropertyValue name="Item9.DataProvider">{0A057BAD-6706-45D2-A800-683A29EC6BA3}</PropertyValue><PropertyValue name="Item9.ID">04E59865B9CD671A5191259D0C5802F3</PropertyValue><PropertyValue name="Item9.Name">TestUpdate</PropertyValue><PropertyValue name="Item9.UseDefaultName">true</PropertyValue><PropertyValue name="Item9.Tab">General</PropertyValue><PropertyValue name="Item9.TabID">General</PropertyValue><PropertyValue name="Item9.OriginalTabID">General</PropertyValue><PropertyValue name="Item9.OriginalTab">General</PropertyValue><PropertyValue name="Item9.RecordType">1</PropertyValue><PropertyValue name="Item9.Data">        [Test]
+        public void TestUpdate()
+        {
+            var vm = new MainViewModel();
+
+            var count = 1;
+            vm.UpdateCommand.Execute(null);
+            var should = string.Format(MainViewModel.MessageTemplate, count);
+            Assert.AreEqual(should, vm.Title);
+
+            count = 2;
+            vm.UpdateCommand.Execute(null);
+            should = string.Format(MainViewModel.MessageTemplate, count);
+            Assert.AreEqual(should, vm.Title);
+        }
+</PropertyValue><PropertyValue name="Item9.Position">10</PropertyValue><PropertyValue name="Item10.DataProvider">{0A057BAD-6706-45D2-A800-683A29EC6BA3}</PropertyValue><PropertyValue name="Item10.ID">FE258041AB3D75EBC1DDAEF62A4C8CB6</PropertyValue><PropertyValue name="Item10.Name">-- App ---------------</PropertyValue><PropertyValue name="Item10.UseDefaultName">false</PropertyValue><PropertyValue name="Item10.Tab">General</PropertyValue><PropertyValue name="Item10.TabID">General</PropertyValue><PropertyValue name="Item10.OriginalTabID">General</PropertyValue><PropertyValue name="Item10.OriginalTab">General</PropertyValue><PropertyValue name="Item10.RecordType">1</PropertyValue><PropertyValue name="Item10.Data">        private static ViewModelLocator _locator;
+
+        public static ViewModelLocator Locator 
+            =&gt; _locator ?? (_locator = new ViewModelLocator());
+</PropertyValue><PropertyValue name="Item10.Position">11</PropertyValue><PropertyValue name="Item11.DataProvider">{0A057BAD-6706-45D2-A800-683A29EC6BA3}</PropertyValue><PropertyValue name="Item11.ID">FE258041AB3D75EBC1DDAEF62A4C8CB6</PropertyValue><PropertyValue name="Item11.Name">Locator</PropertyValue><PropertyValue name="Item11.UseDefaultName">false</PropertyValue><PropertyValue name="Item11.Tab">General</PropertyValue><PropertyValue name="Item11.TabID">General</PropertyValue><PropertyValue name="Item11.OriginalTabID">General</PropertyValue><PropertyValue name="Item11.OriginalTab">General</PropertyValue><PropertyValue name="Item11.RecordType">1</PropertyValue><PropertyValue name="Item11.Data">        private static ViewModelLocator _locator;
+
+        public static ViewModelLocator Locator 
+            =&gt; _locator ?? (_locator = new ViewModelLocator());
+</PropertyValue><PropertyValue name="Item11.Position">12</PropertyValue><PropertyValue name="Item12.DataProvider">{0A057BAD-6706-45D2-A800-683A29EC6BA3}</PropertyValue><PropertyValue name="Item12.ID">B70A7073F5C4EABBB857D551AE7B2F95</PropertyValue><PropertyValue name="Item12.Name">-- MainActivity --</PropertyValue><PropertyValue name="Item12.UseDefaultName">true</PropertyValue><PropertyValue name="Item12.Tab">General</PropertyValue><PropertyValue name="Item12.TabID">General</PropertyValue><PropertyValue name="Item12.OriginalTabID">General</PropertyValue><PropertyValue name="Item12.OriginalTab">General</PropertyValue><PropertyValue name="Item12.RecordType">1</PropertyValue><PropertyValue name="Item12.Data">        &lt;Style x:Key="MouseStyle"
+               TargetType="Rectangle"&gt;
+            &lt;Setter Property="Margin"
+                    Value="8" /&gt;
+            &lt;Setter Property="Height"
+                    Value="24" /&gt;
+            &lt;Setter Property="Width"
+                    Value="24" /&gt;
+        &lt;/Style&gt;
+</PropertyValue><PropertyValue name="Item12.Position">13</PropertyValue><PropertyValue name="Item13.DataProvider">{0A057BAD-6706-45D2-A800-683A29EC6BA3}</PropertyValue><PropertyValue name="Item13.ID">AFE40F283BFFF620BB8ADF1F43B6ED91</PropertyValue><PropertyValue name="Item13.Name">Attributes</PropertyValue><PropertyValue name="Item13.UseDefaultName">true</PropertyValue><PropertyValue name="Item13.Tab">General</PropertyValue><PropertyValue name="Item13.TabID">General</PropertyValue><PropertyValue name="Item13.OriginalTabID">General</PropertyValue><PropertyValue name="Item13.OriginalTab">General</PropertyValue><PropertyValue name="Item13.RecordType">1</PropertyValue><PropertyValue name="Item13.Data">        private List&lt;Binding&gt; _bindings = new List&lt;Binding&gt;();
+        private Button _button;
+</PropertyValue><PropertyValue name="Item13.Position">14</PropertyValue><PropertyValue name="Item14.DataProvider">{0A057BAD-6706-45D2-A800-683A29EC6BA3}</PropertyValue><PropertyValue name="Item14.ID">D4A4D53525CB119C5C4538793F1A2A83</PropertyValue><PropertyValue name="Item14.Name">Vm</PropertyValue><PropertyValue name="Item14.UseDefaultName">true</PropertyValue><PropertyValue name="Item14.Tab">General</PropertyValue><PropertyValue name="Item14.TabID">General</PropertyValue><PropertyValue name="Item14.OriginalTabID">General</PropertyValue><PropertyValue name="Item14.OriginalTab">General</PropertyValue><PropertyValue name="Item14.RecordType">1</PropertyValue><PropertyValue name="Item14.Data">
+        public MainViewModel Vm
+        {
+            get
+            {
+                return App.Locator.Main;
+            }
+        }
+</PropertyValue><PropertyValue name="Item14.Position">15</PropertyValue><PropertyValue name="Item15.DataProvider">{0A057BAD-6706-45D2-A800-683A29EC6BA3}</PropertyValue><PropertyValue name="Item15.ID">1C9993C59E39A99A8FEA53C98E60ED8C</PropertyValue><PropertyValue name="Item15.Name">Binding</PropertyValue><PropertyValue name="Item15.UseDefaultName">true</PropertyValue><PropertyValue name="Item15.Tab">General</PropertyValue><PropertyValue name="Item15.TabID">General</PropertyValue><PropertyValue name="Item15.OriginalTabID">General</PropertyValue><PropertyValue name="Item15.OriginalTab">General</PropertyValue><PropertyValue name="Item15.RecordType">1</PropertyValue><PropertyValue name="Item15.Data">
+            _bindings.Add(
+                this.SetBinding(
+                    () =&gt; Vm.Title,
+                    () =&gt; _button.Text));
+
+</PropertyValue><PropertyValue name="Item15.Position">16</PropertyValue><PropertyValue name="Item16.DataProvider">{0A057BAD-6706-45D2-A800-683A29EC6BA3}</PropertyValue><PropertyValue name="Item16.ID">37C522C97A70951421184FAA213DFE0B</PropertyValue><PropertyValue name="Item16.Name">Command</PropertyValue><PropertyValue name="Item16.UseDefaultName">true</PropertyValue><PropertyValue name="Item16.Tab">General</PropertyValue><PropertyValue name="Item16.TabID">General</PropertyValue><PropertyValue name="Item16.OriginalTabID">General</PropertyValue><PropertyValue name="Item16.OriginalTab">General</PropertyValue><PropertyValue name="Item16.RecordType">1</PropertyValue><PropertyValue name="Item16.Data">            _button.SetCommand(Vm.UpdateCommand);
+</PropertyValue><PropertyValue name="Item16.Position">17</PropertyValue><PropertyValue name="ItemCount">17</PropertyValue></Category></Category></UserSettings>

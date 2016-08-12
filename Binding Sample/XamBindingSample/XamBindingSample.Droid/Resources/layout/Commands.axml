@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:minWidth="25px"
+            android:minHeight="25px">
+            <TextView
+                android:text="Simple command"
+                style="@style/LabelStyle" />
+            <Button
+                android:text="Click triggers the command"
+                android:id="@+id/SimpleCommandButton"
+                style="@style/ButtonStyle" />
+            <View
+                style="@style/SeparatorStyle" />
+            <TextView
+                android:text="Command and checkbox"
+                style="@style/LabelStyle" />
+            <CheckBox
+                android:text="CheckedChange triggers the command"
+                android:id="@+id/MyCheckBox"
+                style="@style/CheckBoxStyle" />
+            <View
+                style="@style/SeparatorStyle" />
+            <TextView
+                android:text="Command and static parameter"
+                style="@style/LabelStyle" />
+            <Button
+                android:text="Show message"
+                android:id="@+id/StaticParameterButton"
+                style="@style/ButtonStyle" />
+            <View
+                style="@style/SeparatorStyle" />
+            <TextView
+                android:text="Command and custom event"
+                style="@style/LabelStyle" />
+            <EditText
+                android:text="Focus change will trigger the command"
+                android:id="@+id/CustomEventEditText"
+                style="@style/EditTextStyle" />
+            <View
+                style="@style/SeparatorStyle" />
+            <TextView
+                android:text="Command and dynamic parameter"
+                style="@style/LabelStyle" />
+            <EditText
+                android:id="@+id/MyEditText"
+                style="@style/EditTextStyle" />
+            <Button
+                android:text="Show message"
+                android:id="@+id/DynamicParameterButton"
+                style="@style/ButtonStyle" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

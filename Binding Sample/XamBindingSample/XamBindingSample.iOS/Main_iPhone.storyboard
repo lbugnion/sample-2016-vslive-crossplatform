@@ -1,0 +1,915 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4451" systemVersion="13A461" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="8">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733.0"/>
+    </dependencies>
+    <scenes>
+        <!--class Prefix:identifier View Controller-->
+        <scene sceneID="7">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="8" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="11">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="10" kind="relationship" relationship="rootViewController" id="9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="12" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-39" y="75"/>
+        </scene>
+        <scene sceneID="13">
+            <objects>
+                <viewController id="10" sceneMemberID="viewController" customClass="MainViewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5"/>
+                        <viewControllerLayoutGuide type="bottom" id="6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="15">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="146" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="20" y="94" width="280" height="30"/>
+                                <state key="normal" title="See Bindings Sample">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="150" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="20" y="174" width="280" height="30"/>
+                                <state key="normal" title="See Commands Sample">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="For the Lists sample, see the standalone iOS sample" lineBreakMode="tailTruncation" minimumFontSize="10" id="665" translatesAutoresizingMaskIntoConstraints="NO" textAlignment="center" numberOfLines="2">
+                                <rect key="frame" x="10" y="254" width="300" height="60"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint id="147" firstItem="15" firstAttribute="trailing" secondItem="146" secondAttribute="trailing" constant="20"/>
+                            <constraint id="148" firstItem="146" firstAttribute="leading" secondItem="15" secondAttribute="leading" constant="20"/>
+                            <constraint id="149" firstItem="146" firstAttribute="top" secondItem="5" secondAttribute="bottom" constant="30"/>
+                            <constraint id="151" firstItem="150" firstAttribute="top" secondItem="146" secondAttribute="bottom" constant="50"/>
+                            <constraint id="152" firstItem="15" firstAttribute="trailing" secondItem="150" secondAttribute="trailing" constant="20"/>
+                            <constraint id="153" firstItem="150" firstAttribute="leading" secondItem="15" secondAttribute="leading" constant="20"/>
+                            <constraint id="666" firstItem="665" firstAttribute="top" secondItem="150" secondAttribute="bottom" constant="50"/>
+                            <constraint id="667" firstItem="665" firstAttribute="leading" secondItem="15" secondAttribute="leading" constant="10"/>
+                            <constraint id="668" firstItem="15" firstAttribute="trailing" secondItem="665" secondAttribute="trailing" constant="10"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="MVVM Light Bindings" id="14"/>
+                    <connections>
+                        <outlet property="BindingsButton" destination="146" id="name-outlet-146"/>
+                        <outlet property="CommandsButton" destination="150" id="name-outlet-150"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="16" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="393" y="79"/>
+        </scene>
+        <scene sceneID="207">
+            <objects>
+                <viewController id="208" sceneMemberID="viewController" storyboardIdentifier="BindingsPage" useStoryboardIdentifierAsRestorationIdentifier="YES" customClass="BindingsViewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="205"/>
+                        <viewControllerLayoutGuide type="bottom" id="206"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="209">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Simple bindings" lineBreakMode="tailTruncation" minimumFontSize="10" id="212" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="10" y="35" width="300" height="28"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="213">
+                                <rect key="frame" x="10" y="226.5" width="53" height="27"/>
+                                <constraints>
+                                    <constraint id="221" firstItem="213" firstAttribute="height" constant="27"/>
+                                    <constraint id="251" firstItem="213" firstAttribute="width" constant="51"/>
+                                </constraints>
+                            </switch>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="214" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="10" y="181.5" width="300" height="30"/>
+                                <state key="normal" title="Toggle the VM's property">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <constraints>
+                                    <constraint id="583" firstItem="214" firstAttribute="height" constant="30"/>
+                                </constraints>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="This switch is bound to the VM's property (oneway)" lineBreakMode="tailTruncation" minimumFontSize="10" id="215" translatesAutoresizingMaskIntoConstraints="NO" numberOfLines="2">
+                                <rect key="frame" x="71" y="223.5" width="239" height="48"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <constraints>
+                                    <constraint id="226" firstItem="215" firstAttribute="height" constant="48"/>
+                                </constraints>
+                            </label>
+                            <view contentMode="scaleToFill" id="245" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="10" y="170.5" width="300" height="2"/>
+                                <color key="backgroundColor" customColorSpace="calibratedWhite" colorSpace="calibratedRGB" red="0.78431372549019607" green="0.78431372549019607" blue="0.78431372549019607" alpha="1"/>
+                                <subviews/>
+                                <constraints>
+                                    <constraint id="249" firstItem="245" firstAttribute="height" constant="2"/>
+                                </constraints>
+                            </view>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Changed triggers the binding (default)" borderStyle="roundedRect" minimumFontSize="17" id="257" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="10" y="85" width="300" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <constraints>
+                                    <constraint id="261" firstItem="257" firstAttribute="height" constant="30"/>
+                                </constraints>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Nothing yet" lineBreakMode="tailTruncation" minimumFontSize="10" id="262" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="10" y="135" width="300" height="20.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" id="268" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="10" y="286.5" width="300" height="2"/>
+                                <color key="backgroundColor" customColorSpace="calibratedWhite" colorSpace="calibratedRGB" red="0.78431372549019607" green="0.78431372549019607" blue="0.78431372549019607" alpha="1"/>
+                                <constraints>
+                                    <constraint id="269" firstItem="268" firstAttribute="height" constant="2"/>
+                                </constraints>
+                            </view>
+                            <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="273">
+                                <rect key="frame" x="10" y="307.5" width="53" height="31"/>
+                                <constraints>
+                                    <constraint id="278" firstItem="273" firstAttribute="width" constant="51"/>
+                                </constraints>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="274">
+                                <rect key="frame" x="259" y="307.5" width="53" height="27"/>
+                                <constraints>
+                                    <constraint id="281" firstItem="274" firstAttribute="width" constant="51"/>
+                                    <constraint id="282" firstItem="274" firstAttribute="height" constant="27"/>
+                                </constraints>
+                            </switch>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="ValueChanged triggers the binding (default)" lineBreakMode="tailTruncation" minimumFontSize="10" id="275" translatesAutoresizingMaskIntoConstraints="NO" numberOfLines="3">
+                                <rect key="frame" x="69" y="296.5" width="180" height="61"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <constraints>
+                                    <constraint id="375" firstItem="275" firstAttribute="height" constant="61"/>
+                                </constraints>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint id="216" firstItem="212" firstAttribute="leading" secondItem="209" secondAttribute="leading" constant="10"/>
+                            <constraint id="217" firstItem="209" firstAttribute="trailing" secondItem="212" secondAttribute="trailing" constant="10"/>
+                            <constraint id="218" firstItem="212" firstAttribute="top" secondItem="205" secondAttribute="bottom" constant="15"/>
+                            <constraint id="258" firstItem="257" firstAttribute="leading" secondItem="209" secondAttribute="leading" constant="10"/>
+                            <constraint id="259" firstItem="209" firstAttribute="trailing" secondItem="257" secondAttribute="trailing" constant="10"/>
+                            <constraint id="263" firstItem="262" firstAttribute="leading" secondItem="209" secondAttribute="leading" constant="10"/>
+                            <constraint id="264" firstItem="209" firstAttribute="trailing" secondItem="262" secondAttribute="trailing" constant="10"/>
+                            <constraint id="277" firstItem="273" firstAttribute="leading" secondItem="209" secondAttribute="leading" constant="10"/>
+                            <constraint id="351" firstItem="257" firstAttribute="top" secondItem="212" secondAttribute="bottom" constant="20"/>
+                            <constraint id="354" firstItem="262" firstAttribute="top" secondItem="257" secondAttribute="bottom" constant="20"/>
+                            <constraint id="355" firstItem="245" firstAttribute="leading" secondItem="209" secondAttribute="leading" constant="10"/>
+                            <constraint id="356" firstItem="209" firstAttribute="trailing" secondItem="245" secondAttribute="trailing" constant="10"/>
+                            <constraint id="357" firstItem="245" firstAttribute="top" secondItem="262" secondAttribute="bottom" constant="15"/>
+                            <constraint id="367" firstItem="268" firstAttribute="leading" secondItem="209" secondAttribute="leading" constant="10"/>
+                            <constraint id="368" firstItem="209" firstAttribute="trailing" secondItem="268" secondAttribute="trailing" constant="10"/>
+                            <constraint id="369" firstItem="273" firstAttribute="top" secondItem="268" secondAttribute="centerY" constant="20"/>
+                            <constraint id="372" firstItem="275" firstAttribute="top" secondItem="268" secondAttribute="bottom" constant="8"/>
+                            <constraint id="373" firstItem="275" firstAttribute="leading" secondItem="273" secondAttribute="trailing" constant="8"/>
+                            <constraint id="374" firstItem="274" firstAttribute="leading" secondItem="275" secondAttribute="trailing" constant="10"/>
+                            <constraint id="376" firstItem="274" firstAttribute="top" secondItem="268" secondAttribute="centerY" constant="20"/>
+                            <constraint id="378" firstItem="209" firstAttribute="trailing" secondItem="274" secondAttribute="trailing" constant="10"/>
+                            <constraint id="580" firstItem="214" firstAttribute="top" secondItem="245" secondAttribute="centerY" constant="10"/>
+                            <constraint id="581" firstItem="214" firstAttribute="leading" secondItem="209" secondAttribute="leading" constant="10"/>
+                            <constraint id="582" firstItem="209" firstAttribute="trailing" secondItem="214" secondAttribute="trailing" constant="10"/>
+                            <constraint id="584" firstItem="213" firstAttribute="top" secondItem="214" secondAttribute="bottom" constant="15"/>
+                            <constraint id="585" firstItem="213" firstAttribute="leading" secondItem="209" secondAttribute="leading" constant="10"/>
+                            <constraint id="586" firstItem="215" firstAttribute="top" secondItem="214" secondAttribute="bottom" constant="12"/>
+                            <constraint id="587" firstItem="215" firstAttribute="leading" secondItem="213" secondAttribute="trailing" constant="10"/>
+                            <constraint id="588" firstItem="209" firstAttribute="trailing" secondItem="215" secondAttribute="trailing" constant="10"/>
+                            <constraint id="589" firstItem="268" firstAttribute="top" secondItem="215" secondAttribute="bottom" constant="15"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="MySwitchA1" destination="213" id="name-outlet-213"/>
+                        <outlet property="MyButtonA1" destination="214" id="name-outlet-214"/>
+                        <outlet property="MyTextFieldB1" destination="257" id="name-outlet-257"/>
+                        <outlet property="MyLabelB1" destination="262" id="name-outlet-262"/>
+                        <outlet property="MySwitchC1" destination="273" id="name-outlet-273"/>
+                        <outlet property="MySwitchC2" destination="274" id="name-outlet-274"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="210" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="390" y="639"/>
+        </scene>
+        <scene sceneID="294">
+            <objects>
+                <viewController id="295" sceneMemberID="viewController" storyboardIdentifier="BindingsPage2" useStoryboardIdentifierAsRestorationIdentifier="YES" customClass="Bindings2ViewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="292"/>
+                        <viewControllerLayoutGuide type="bottom" id="293"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="296">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Bindings with custom events (1)" lineBreakMode="tailTruncation" minimumFontSize="10" id="299" translatesAutoresizingMaskIntoConstraints="NO" numberOfLines="2">
+                                <rect key="frame" x="10" y="30" width="300" height="63"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <constraints>
+                                    <constraint id="309" firstItem="299" firstAttribute="height" constant="63"/>
+                                </constraints>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="EditingDidBegin will trigger the binding" borderStyle="roundedRect" minimumFontSize="17" id="310" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="10" y="108" width="300" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <constraints>
+                                    <constraint id="316" firstItem="310" firstAttribute="height" constant="30"/>
+                                </constraints>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Nothing yet" lineBreakMode="tailTruncation" minimumFontSize="10" id="311" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="10" y="153" width="300" height="20.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" id="312" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="10" y="193.5" width="300" height="2"/>
+                                <color key="backgroundColor" customColorSpace="calibratedWhite" colorSpace="calibratedRGB" red="0.78431372549019607" green="0.78431372549019607" blue="0.78431372549019607" alpha="1"/>
+                                <constraints>
+                                    <constraint id="392" firstItem="312" firstAttribute="height" constant="2"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint id="306" firstItem="299" firstAttribute="leading" secondItem="296" secondAttribute="leading" constant="10"/>
+                            <constraint id="307" firstItem="299" firstAttribute="top" secondItem="292" secondAttribute="bottom" constant="10"/>
+                            <constraint id="308" firstItem="296" firstAttribute="trailing" secondItem="299" secondAttribute="trailing" constant="10"/>
+                            <constraint id="313" firstItem="310" firstAttribute="top" secondItem="299" secondAttribute="bottom" constant="15"/>
+                            <constraint id="314" firstItem="310" firstAttribute="leading" secondItem="296" secondAttribute="leading" constant="10"/>
+                            <constraint id="315" firstItem="296" firstAttribute="trailing" secondItem="310" secondAttribute="trailing" constant="10"/>
+                            <constraint id="317" firstItem="311" firstAttribute="top" secondItem="310" secondAttribute="bottom" constant="15"/>
+                            <constraint id="318" firstItem="311" firstAttribute="leading" secondItem="296" secondAttribute="leading" constant="10"/>
+                            <constraint id="319" firstItem="296" firstAttribute="trailing" secondItem="311" secondAttribute="trailing" constant="10"/>
+                            <constraint id="320" firstItem="312" firstAttribute="top" secondItem="311" secondAttribute="bottom" constant="20"/>
+                            <constraint id="321" firstItem="312" firstAttribute="leading" secondItem="296" secondAttribute="leading" constant="10"/>
+                            <constraint id="322" firstItem="296" firstAttribute="trailing" secondItem="312" secondAttribute="trailing" constant="10"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="MyTextFieldA1" destination="310" id="name-outlet-310"/>
+                        <outlet property="MyLabelA1" destination="311" id="name-outlet-311"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="297" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="776" y="641"/>
+        </scene>
+        <scene sceneID="387">
+            <objects>
+                <viewController id="388" sceneMemberID="viewController" customClass="Bindings3ViewController" storyboardIdentifier="BindingsPage3" useStoryboardIdentifierAsRestorationIdentifier="YES">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="385"/>
+                        <viewControllerLayoutGuide type="bottom" id="386"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="389">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Bindings with custom events (2)" lineBreakMode="tailTruncation" minimumFontSize="10" id="393" translatesAutoresizingMaskIntoConstraints="NO" numberOfLines="2">
+                                <rect key="frame" x="10" y="30" width="300" height="63"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <constraints>
+                                    <constraint id="398" firstItem="393" firstAttribute="height" constant="63"/>
+                                </constraints>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Nothing yet" lineBreakMode="tailTruncation" minimumFontSize="10" id="401" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="10" y="153" width="300" height="20.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" id="402" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="10" y="193.5" width="300" height="2"/>
+                                <color key="backgroundColor" customColorSpace="calibratedWhite" colorSpace="calibratedRGB" red="0.78431372549019607" green="0.78431372549019607" blue="0.78431372549019607" alpha="1"/>
+                                <constraints>
+                                    <constraint id="403" firstItem="402" firstAttribute="height" constant="2"/>
+                                </constraints>
+                            </view>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="EditingDidEnd will trigger the binding" borderStyle="roundedRect" minimumFontSize="17" id="404" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="10" y="108" width="300" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <constraints>
+                                    <constraint id="405" firstItem="404" firstAttribute="height" constant="30"/>
+                                </constraints>
+                            </textField>
+                        </subviews>
+                        <constraints>
+                            <constraint id="395" firstItem="393" firstAttribute="top" secondItem="385" secondAttribute="bottom" constant="10"/>
+                            <constraint id="396" firstItem="393" firstAttribute="leading" secondItem="389" secondAttribute="leading" constant="10"/>
+                            <constraint id="397" firstItem="389" firstAttribute="trailing" secondItem="393" secondAttribute="trailing" constant="10"/>
+                            <constraint id="406" firstItem="404" firstAttribute="top" secondItem="393" secondAttribute="bottom" constant="15"/>
+                            <constraint id="407" firstItem="404" firstAttribute="leading" secondItem="389" secondAttribute="leading" constant="10"/>
+                            <constraint id="408" firstItem="389" firstAttribute="trailing" secondItem="404" secondAttribute="trailing" constant="10"/>
+                            <constraint id="409" firstItem="401" firstAttribute="top" secondItem="404" secondAttribute="bottom" constant="15"/>
+                            <constraint id="410" firstItem="401" firstAttribute="leading" secondItem="389" secondAttribute="leading" constant="10"/>
+                            <constraint id="411" firstItem="389" firstAttribute="trailing" secondItem="401" secondAttribute="trailing" constant="10"/>
+                            <constraint id="412" firstItem="402" firstAttribute="top" secondItem="401" secondAttribute="bottom" constant="20"/>
+                            <constraint id="413" firstItem="402" firstAttribute="leading" secondItem="389" secondAttribute="leading" constant="10"/>
+                            <constraint id="414" firstItem="389" firstAttribute="trailing" secondItem="402" secondAttribute="trailing" constant="10"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="MyTextFieldA1" destination="404" id="name-outlet-404"/>
+                        <outlet property="MyLabelA1" destination="401" id="name-outlet-401"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="390" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1180" y="641"/>
+        </scene>
+        <scene sceneID="417">
+            <objects>
+                <viewController id="418" sceneMemberID="viewController" customClass="Bindings4ViewController" storyboardIdentifier="BindingsPage4" useStoryboardIdentifierAsRestorationIdentifier="YES">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="415"/>
+                        <viewControllerLayoutGuide type="bottom" id="416"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="419">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="2-way with conversion (1)" lineBreakMode="tailTruncation" minimumFontSize="10" id="422" translatesAutoresizingMaskIntoConstraints="NO" numberOfLines="2">
+                                <rect key="frame" x="10" y="30" width="280" height="27"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <constraints>
+                                    <constraint id="592" firstItem="422" firstAttribute="height" constant="27"/>
+                                </constraints>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="428">
+                                <rect key="frame" x="10" y="77" width="53" height="27"/>
+                                <constraints>
+                                    <constraint id="441" firstItem="428" firstAttribute="width" constant="51"/>
+                                    <constraint id="442" firstItem="428" firstAttribute="height" constant="27"/>
+                                </constraints>
+                            </switch>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="This switch is bound to the Text below (with conversion)" lineBreakMode="tailTruncation" minimumFontSize="10" id="429" translatesAutoresizingMaskIntoConstraints="NO" numberOfLines="2">
+                                <rect key="frame" x="71" y="72" width="239" height="46"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <constraints>
+                                    <constraint id="446" firstItem="429" firstAttribute="height" constant="46"/>
+                                </constraints>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Nothing yet" borderStyle="roundedRect" minimumFontSize="17" id="430" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="10" y="138" width="300" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <constraints>
+                                    <constraint id="458" firstItem="430" firstAttribute="height" constant="30"/>
+                                </constraints>
+                            </textField>
+                        </subviews>
+                        <constraints>
+                            <constraint id="424" firstItem="422" firstAttribute="top" secondItem="415" secondAttribute="bottom" constant="10"/>
+                            <constraint id="425" firstItem="422" firstAttribute="leading" secondItem="419" secondAttribute="leading" constant="10"/>
+                            <constraint id="426" firstItem="419" firstAttribute="trailing" secondItem="422" secondAttribute="trailing" constant="30"/>
+                            <constraint id="439" firstItem="428" firstAttribute="top" secondItem="422" secondAttribute="bottom" constant="20"/>
+                            <constraint id="440" firstItem="428" firstAttribute="leading" secondItem="419" secondAttribute="leading" constant="10"/>
+                            <constraint id="443" firstItem="429" firstAttribute="top" secondItem="422" secondAttribute="bottom" constant="15"/>
+                            <constraint id="444" firstItem="429" firstAttribute="leading" secondItem="428" secondAttribute="trailing" constant="10"/>
+                            <constraint id="445" firstItem="419" firstAttribute="trailing" secondItem="429" secondAttribute="trailing" constant="10"/>
+                            <constraint id="455" firstItem="430" firstAttribute="top" secondItem="429" secondAttribute="bottom" constant="20"/>
+                            <constraint id="456" firstItem="430" firstAttribute="leading" secondItem="419" secondAttribute="leading" constant="10"/>
+                            <constraint id="457" firstItem="419" firstAttribute="trailing" secondItem="430" secondAttribute="trailing" constant="10"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="MySwitchA1" destination="428" id="name-outlet-428"/>
+                        <outlet property="MyTextFieldA1" destination="430" id="name-outlet-430"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="420" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1600" y="640"/>
+        </scene>
+        <scene sceneID="461">
+            <objects>
+                <viewController id="462" sceneMemberID="viewController" customClass="Bindings5ViewController" storyboardIdentifier="BindingsPage5" useStoryboardIdentifierAsRestorationIdentifier="YES">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="459"/>
+                        <viewControllerLayoutGuide type="bottom" id="460"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="463">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="2-way with conversion (2)" lineBreakMode="tailTruncation" minimumFontSize="10" id="467" translatesAutoresizingMaskIntoConstraints="NO" numberOfLines="2">
+                                <rect key="frame" x="10" y="30" width="280" height="27"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <constraints>
+                                    <constraint id="593" firstItem="467" firstAttribute="height" constant="27"/>
+                                </constraints>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="469">
+                                <rect key="frame" x="10" y="77" width="53" height="27"/>
+                                <constraints>
+                                    <constraint id="470" firstItem="469" firstAttribute="width" constant="51"/>
+                                    <constraint id="471" firstItem="469" firstAttribute="height" constant="27"/>
+                                </constraints>
+                            </switch>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="This switch is bound to the Text below (with custom conversion)" lineBreakMode="tailTruncation" minimumFontSize="10" id="472" translatesAutoresizingMaskIntoConstraints="NO" numberOfLines="3">
+                                <rect key="frame" x="71" y="67" width="239" height="66"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <constraints>
+                                    <constraint id="488" firstItem="472" firstAttribute="height" constant="66"/>
+                                </constraints>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Nothing yet" borderStyle="roundedRect" minimumFontSize="17" id="474" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="10" y="153" width="300" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <constraints>
+                                    <constraint id="475" firstItem="474" firstAttribute="height" constant="30"/>
+                                </constraints>
+                            </textField>
+                        </subviews>
+                        <constraints>
+                            <constraint id="476" firstItem="467" firstAttribute="top" secondItem="459" secondAttribute="bottom" constant="10"/>
+                            <constraint id="477" firstItem="467" firstAttribute="leading" secondItem="463" secondAttribute="leading" constant="10"/>
+                            <constraint id="478" firstItem="463" firstAttribute="trailing" secondItem="467" secondAttribute="trailing" constant="30"/>
+                            <constraint id="479" firstItem="469" firstAttribute="leading" secondItem="463" secondAttribute="leading" constant="10"/>
+                            <constraint id="480" firstItem="469" firstAttribute="top" secondItem="467" secondAttribute="bottom" constant="20"/>
+                            <constraint id="481" firstItem="472" firstAttribute="top" secondItem="467" secondAttribute="bottom" constant="10"/>
+                            <constraint id="482" firstItem="472" firstAttribute="leading" secondItem="469" secondAttribute="trailing" constant="10"/>
+                            <constraint id="483" firstItem="463" firstAttribute="trailing" secondItem="472" secondAttribute="trailing" constant="10"/>
+                            <constraint id="485" firstItem="474" firstAttribute="leading" secondItem="463" secondAttribute="leading" constant="10"/>
+                            <constraint id="486" firstItem="463" firstAttribute="trailing" secondItem="474" secondAttribute="trailing" constant="10"/>
+                            <constraint id="487" firstItem="474" firstAttribute="top" secondItem="472" secondAttribute="bottom" constant="20"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="MyTextFieldA1" destination="474" id="name-outlet-474"/>
+                        <outlet property="MySwitchA1" destination="469" id="name-outlet-469"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="464" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2011" y="637"/>
+        </scene>
+        <scene sceneID="491">
+            <objects>
+                <viewController id="492" sceneMemberID="viewController" customClass="Bindings6ViewController" storyboardIdentifier="BindingsPage6" useStoryboardIdentifierAsRestorationIdentifier="YES">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="489"/>
+                        <viewControllerLayoutGuide type="bottom" id="490"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="493">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="When Source Changes" lineBreakMode="tailTruncation" minimumFontSize="10" id="510" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="10" y="30" width="300" height="34"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <constraints>
+                                    <constraint id="523" firstItem="510" firstAttribute="height" constant="34"/>
+                                </constraints>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="527">
+                                <rect key="frame" x="10" y="84" width="53" height="27"/>
+                                <constraints>
+                                    <constraint id="528" firstItem="527" firstAttribute="width" constant="51"/>
+                                    <constraint id="529" firstItem="527" firstAttribute="height" constant="27"/>
+                                </constraints>
+                            </switch>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="This switch is linked to the text below" lineBreakMode="tailTruncation" minimumFontSize="10" id="530" translatesAutoresizingMaskIntoConstraints="NO" numberOfLines="2">
+                                <rect key="frame" x="71" y="80" width="239" height="41"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <constraints>
+                                    <constraint id="539" firstItem="530" firstAttribute="height" constant="41"/>
+                                </constraints>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Nothing yet" lineBreakMode="tailTruncation" minimumFontSize="10" id="540" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="10" y="141" width="300" height="20.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint id="524" firstItem="510" firstAttribute="top" secondItem="489" secondAttribute="bottom" constant="10"/>
+                            <constraint id="525" firstItem="510" firstAttribute="leading" secondItem="493" secondAttribute="leading" constant="10"/>
+                            <constraint id="526" firstItem="493" firstAttribute="trailing" secondItem="510" secondAttribute="trailing" constant="10"/>
+                            <constraint id="534" firstItem="527" firstAttribute="top" secondItem="510" secondAttribute="bottom" constant="20"/>
+                            <constraint id="535" firstItem="527" firstAttribute="leading" secondItem="493" secondAttribute="leading" constant="10"/>
+                            <constraint id="536" firstItem="530" firstAttribute="top" secondItem="510" secondAttribute="bottom" constant="16"/>
+                            <constraint id="537" firstItem="530" firstAttribute="leading" secondItem="527" secondAttribute="trailing" constant="10"/>
+                            <constraint id="538" firstItem="493" firstAttribute="trailing" secondItem="530" secondAttribute="trailing" constant="10"/>
+                            <constraint id="541" firstItem="540" firstAttribute="top" secondItem="530" secondAttribute="bottom" constant="20"/>
+                            <constraint id="542" firstItem="540" firstAttribute="leading" secondItem="493" secondAttribute="leading" constant="10"/>
+                            <constraint id="543" firstItem="493" firstAttribute="trailing" secondItem="540" secondAttribute="trailing" constant="10"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="MyLabelA1" destination="540" id="name-outlet-540"/>
+                        <outlet property="MySwitchA1" destination="527" id="name-outlet-527"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="494" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2410" y="632"/>
+        </scene>
+        <scene sceneID="498">
+            <objects>
+                <viewController id="499" sceneMemberID="viewController" customClass="Bindings7ViewController" storyboardIdentifier="BindingsPage7" useStoryboardIdentifierAsRestorationIdentifier="YES">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="496"/>
+                        <viewControllerLayoutGuide type="bottom" id="497"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="500">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Value and ValueChanged" lineBreakMode="tailTruncation" minimumFontSize="10" id="512" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="10" y="30" width="300" height="35"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <constraints>
+                                    <constraint id="522" firstItem="512" firstAttribute="height" constant="35"/>
+                                </constraints>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Nothing yet" lineBreakMode="tailTruncation" minimumFontSize="10" id="545" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="10" y="157" width="300" height="21"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <constraints>
+                                    <constraint id="559" firstItem="545" firstAttribute="height" constant="21"/>
+                                </constraints>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="551" translatesAutoresizingMaskIntoConstraints="NO" text="Changed will trigger the binding's ValueChanged event">
+                                <rect key="frame" x="10" y="85" width="300" height="52"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.78431372549019607" green="0.78431372549019607" blue="0.78431372549019607" alpha="1"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <constraints>
+                                    <constraint id="555" firstItem="551" firstAttribute="height" constant="52"/>
+                                </constraints>
+                            </textView>
+                        </subviews>
+                        <constraints>
+                            <constraint id="519" firstItem="512" firstAttribute="top" secondItem="496" secondAttribute="bottom" constant="10"/>
+                            <constraint id="520" firstItem="512" firstAttribute="leading" secondItem="500" secondAttribute="leading" constant="10"/>
+                            <constraint id="521" firstItem="500" firstAttribute="trailing" secondItem="512" secondAttribute="trailing" constant="10"/>
+                            <constraint id="552" firstItem="551" firstAttribute="top" secondItem="512" secondAttribute="bottom" constant="20"/>
+                            <constraint id="553" firstItem="551" firstAttribute="leading" secondItem="500" secondAttribute="leading" constant="10"/>
+                            <constraint id="554" firstItem="500" firstAttribute="trailing" secondItem="551" secondAttribute="trailing" constant="10"/>
+                            <constraint id="556" firstItem="545" firstAttribute="top" secondItem="551" secondAttribute="bottom" constant="20"/>
+                            <constraint id="557" firstItem="545" firstAttribute="leading" secondItem="500" secondAttribute="leading" constant="10"/>
+                            <constraint id="558" firstItem="500" firstAttribute="trailing" secondItem="545" secondAttribute="trailing" constant="10"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="MyLabelA1" destination="545" id="name-outlet-545"/>
+                        <outlet property="MyTextViewA1" destination="551" id="name-outlet-551"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="501" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2798" y="631"/>
+        </scene>
+        <scene sceneID="505">
+            <objects>
+                <viewController id="506" sceneMemberID="viewController" customClass="Bindings8ViewController" storyboardIdentifier="BindingsPage8" useStoryboardIdentifierAsRestorationIdentifier="YES">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="503"/>
+                        <viewControllerLayoutGuide type="bottom" id="504"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="507">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="FallbackValue and TargetNullValue" lineBreakMode="tailTruncation" minimumFontSize="10" id="514" translatesAutoresizingMaskIntoConstraints="NO" numberOfLines="2">
+                                <rect key="frame" x="10" y="30" width="300" height="60"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <constraints>
+                                    <constraint id="515" firstItem="514" firstAttribute="height" constant="60"/>
+                                </constraints>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Nothing yet" lineBreakMode="tailTruncation" minimumFontSize="10" id="560" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="10" y="110" width="300" height="20.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="561" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="10" y="150.5" width="300" height="30"/>
+                                <state key="normal" title="Set the Model and then the Property">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint id="516" firstItem="514" firstAttribute="top" secondItem="503" secondAttribute="bottom" constant="10"/>
+                            <constraint id="517" firstItem="514" firstAttribute="leading" secondItem="507" secondAttribute="leading" constant="10"/>
+                            <constraint id="518" firstItem="507" firstAttribute="trailing" secondItem="514" secondAttribute="trailing" constant="10"/>
+                            <constraint id="562" firstItem="560" firstAttribute="top" secondItem="514" secondAttribute="bottom" constant="20"/>
+                            <constraint id="563" firstItem="560" firstAttribute="leading" secondItem="507" secondAttribute="leading" constant="10"/>
+                            <constraint id="564" firstItem="507" firstAttribute="trailing" secondItem="560" secondAttribute="trailing" constant="10"/>
+                            <constraint id="565" firstItem="561" firstAttribute="top" secondItem="560" secondAttribute="bottom" constant="20"/>
+                            <constraint id="566" firstItem="561" firstAttribute="leading" secondItem="507" secondAttribute="leading" constant="10"/>
+                            <constraint id="567" firstItem="507" firstAttribute="trailing" secondItem="561" secondAttribute="trailing" constant="10"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="MyButtonA1" destination="561" id="name-outlet-561"/>
+                        <outlet property="MyLabelA1" destination="560" id="name-outlet-560"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="508" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3178" y="627"/>
+        </scene>
+        <scene sceneID="671">
+            <objects>
+                <viewController id="672" sceneMemberID="viewController" customClass="Commands1ViewController" storyboardIdentifier="CommandsPage" useStoryboardIdentifierAsRestorationIdentifier="YES">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="669"/>
+                        <viewControllerLayoutGuide type="bottom" id="670"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="673">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Simple command" lineBreakMode="tailTruncation" minimumFontSize="10" id="690" translatesAutoresizingMaskIntoConstraints="NO" numberOfLines="2">
+                                <rect key="frame" x="10" y="30" width="300" height="37"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="699" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="10" y="80" width="300" height="30"/>
+                                <state key="normal" title="Show message">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <view contentMode="scaleToFill" id="703" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="10" y="130" width="300" height="2"/>
+                                <color key="backgroundColor" customColorSpace="calibratedWhite" colorSpace="calibratedRGB" red="0.78431372549019607" green="0.78431372549019607" blue="0.78431372549019607" alpha="1"/>
+                                <subviews/>
+                                <constraints>
+                                    <constraint id="704" firstItem="703" firstAttribute="height" constant="2"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Command and Switch" lineBreakMode="tailTruncation" minimumFontSize="10" id="708" translatesAutoresizingMaskIntoConstraints="NO" numberOfLines="2">
+                                <rect key="frame" x="10" y="141" width="300" height="30"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="712">
+                                <rect key="frame" x="10" y="191" width="53" height="27"/>
+                                <constraints>
+                                    <constraint id="715" firstItem="712" firstAttribute="width" constant="51"/>
+                                    <constraint id="716" firstItem="712" firstAttribute="height" constant="27"/>
+                                </constraints>
+                            </switch>
+                            <view contentMode="scaleToFill" id="719" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="10" y="238" width="300" height="2"/>
+                                <color key="backgroundColor" customColorSpace="calibratedWhite" colorSpace="calibratedRGB" red="0.78431372549019607" green="0.78431372549019607" blue="0.78431372549019607" alpha="1"/>
+                                <subviews/>
+                                <constraints>
+                                    <constraint id="720" firstItem="719" firstAttribute="height" constant="2"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Static parameter" lineBreakMode="tailTruncation" minimumFontSize="10" id="724" translatesAutoresizingMaskIntoConstraints="NO" numberOfLines="2">
+                                <rect key="frame" x="10" y="260" width="300" height="30"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="725" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="10" y="310" width="300" height="30"/>
+                                <state key="normal" title="Show message">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint id="696" firstItem="690" firstAttribute="top" secondItem="669" secondAttribute="bottom" constant="10"/>
+                            <constraint id="697" firstItem="690" firstAttribute="leading" secondItem="673" secondAttribute="leading" constant="10"/>
+                            <constraint id="698" firstItem="673" firstAttribute="trailing" secondItem="690" secondAttribute="trailing" constant="10"/>
+                            <constraint id="700" firstItem="699" firstAttribute="top" secondItem="690" secondAttribute="bottom" constant="20"/>
+                            <constraint id="701" firstItem="699" firstAttribute="leading" secondItem="673" secondAttribute="leading" constant="10"/>
+                            <constraint id="702" firstItem="673" firstAttribute="trailing" secondItem="699" secondAttribute="trailing" constant="10"/>
+                            <constraint id="705" firstItem="703" firstAttribute="top" secondItem="699" secondAttribute="bottom" constant="20"/>
+                            <constraint id="706" firstItem="703" firstAttribute="leading" secondItem="673" secondAttribute="leading" constant="10"/>
+                            <constraint id="707" firstItem="673" firstAttribute="trailing" secondItem="703" secondAttribute="trailing" constant="10"/>
+                            <constraint id="709" firstItem="708" firstAttribute="top" secondItem="703" secondAttribute="centerY" constant="10"/>
+                            <constraint id="710" firstItem="673" firstAttribute="trailing" secondItem="708" secondAttribute="trailing" constant="10"/>
+                            <constraint id="711" firstItem="708" firstAttribute="leading" secondItem="673" secondAttribute="leading" constant="10"/>
+                            <constraint id="713" firstItem="712" firstAttribute="top" secondItem="708" secondAttribute="bottom" constant="20"/>
+                            <constraint id="714" firstItem="712" firstAttribute="leading" secondItem="673" secondAttribute="leading" constant="10"/>
+                            <constraint id="721" firstItem="719" firstAttribute="top" secondItem="712" secondAttribute="bottom" constant="20"/>
+                            <constraint id="722" firstItem="719" firstAttribute="leading" secondItem="673" secondAttribute="leading" constant="10"/>
+                            <constraint id="723" firstItem="673" firstAttribute="trailing" secondItem="719" secondAttribute="trailing" constant="10"/>
+                            <constraint id="726" firstItem="724" firstAttribute="top" secondItem="719" secondAttribute="bottom" constant="20"/>
+                            <constraint id="727" firstItem="724" firstAttribute="leading" secondItem="673" secondAttribute="leading" constant="10"/>
+                            <constraint id="728" firstItem="673" firstAttribute="trailing" secondItem="724" secondAttribute="trailing" constant="10"/>
+                            <constraint id="729" firstItem="725" firstAttribute="top" secondItem="724" secondAttribute="bottom" constant="20"/>
+                            <constraint id="730" firstItem="673" firstAttribute="trailing" secondItem="725" secondAttribute="trailing" constant="10"/>
+                            <constraint id="731" firstItem="725" firstAttribute="leading" secondItem="673" secondAttribute="leading" constant="10"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="SimpleCommandButton" destination="699" id="name-outlet-699"/>
+                        <outlet property="MySwitch" destination="712" id="name-outlet-712"/>
+                        <outlet property="StaticParameterButton" destination="725" id="name-outlet-725"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="674" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="391" y="1220"/>
+        </scene>
+        <scene sceneID="678">
+            <objects>
+                <viewController id="679" sceneMemberID="viewController" customClass="Commands2ViewController" storyboardIdentifier="CommandsPage2" useStoryboardIdentifierAsRestorationIdentifier="YES">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="676"/>
+                        <viewControllerLayoutGuide type="bottom" id="677"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="680">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Command and custom event" lineBreakMode="tailTruncation" minimumFontSize="10" id="692" translatesAutoresizingMaskIntoConstraints="NO" numberOfLines="2">
+                                <rect key="frame" x="10" y="30" width="300" height="63"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <constraints>
+                                    <constraint id="693" firstItem="692" firstAttribute="height" constant="63"/>
+                                </constraints>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Text" borderStyle="roundedRect" minimumFontSize="17" id="735" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="104" y="1466" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="EditingDidEnd will trigger the binding" borderStyle="roundedRect" minimumFontSize="17" id="736" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="10" y="113" width="300" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <constraints>
+                            <constraint id="732" firstItem="692" firstAttribute="top" secondItem="676" secondAttribute="bottom" constant="10"/>
+                            <constraint id="733" firstItem="692" firstAttribute="leading" secondItem="680" secondAttribute="leading" constant="10"/>
+                            <constraint id="734" firstItem="680" firstAttribute="trailing" secondItem="692" secondAttribute="trailing" constant="10"/>
+                            <constraint id="737" firstItem="736" firstAttribute="top" secondItem="692" secondAttribute="bottom" constant="20"/>
+                            <constraint id="738" firstItem="736" firstAttribute="leading" secondItem="680" secondAttribute="leading" constant="10"/>
+                            <constraint id="739" firstItem="680" firstAttribute="trailing" secondItem="736" secondAttribute="trailing" constant="10"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="MyTextField" destination="736" id="name-outlet-736"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="681" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="773" y="1221"/>
+        </scene>
+        <scene sceneID="685">
+            <objects>
+                <viewController id="686" sceneMemberID="viewController" storyboardIdentifier="CommandsPage3" useStoryboardIdentifierAsRestorationIdentifier="YES" customClass="Commands3ViewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="683"/>
+                        <viewControllerLayoutGuide type="bottom" id="684"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="687">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Command and dynamic parameter" lineBreakMode="tailTruncation" minimumFontSize="10" id="694" translatesAutoresizingMaskIntoConstraints="NO" numberOfLines="2">
+                                <rect key="frame" x="10" y="30" width="300" height="63"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <constraints>
+                                    <constraint id="695" firstItem="694" firstAttribute="height" constant="63"/>
+                                </constraints>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="745" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="10" y="113" width="300" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="746" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="10" y="158" width="300" height="30"/>
+                                <state key="normal" title="Show message">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint id="740" firstItem="694" firstAttribute="leading" secondItem="687" secondAttribute="leading" constant="10"/>
+                            <constraint id="741" firstItem="694" firstAttribute="top" secondItem="683" secondAttribute="bottom" constant="10"/>
+                            <constraint id="742" firstItem="687" firstAttribute="trailing" secondItem="694" secondAttribute="trailing" constant="10"/>
+                            <constraint id="747" firstItem="745" firstAttribute="leading" secondItem="687" secondAttribute="leading" constant="10"/>
+                            <constraint id="748" firstItem="687" firstAttribute="trailing" secondItem="745" secondAttribute="trailing" constant="10"/>
+                            <constraint id="749" firstItem="745" firstAttribute="top" secondItem="694" secondAttribute="bottom" constant="20"/>
+                            <constraint id="750" firstItem="746" firstAttribute="top" secondItem="745" secondAttribute="bottom" constant="15"/>
+                            <constraint id="751" firstItem="746" firstAttribute="leading" secondItem="687" secondAttribute="leading" constant="10"/>
+                            <constraint id="752" firstItem="687" firstAttribute="trailing" secondItem="746" secondAttribute="trailing" constant="10"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="MyTextField" destination="745" id="name-outlet-745"/>
+                        <outlet property="DynamicParameterButton" destination="746" id="name-outlet-746"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="688" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1190" y="1223"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+    <resources>
+        <image name="Default-568h.png" width="320" height="568"/>
+        <image name="Icon-60.png" width="60" height="60"/>
+        <image name="Icon-Small-40.png" width="40" height="40"/>
+        <image name="Icon-Small.png" width="29" height="29"/>
+        <image name="Icon.png" width="57" height="57"/>
+    </resources>
+</document>
